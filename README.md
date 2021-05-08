@@ -21,7 +21,7 @@ name: Update README
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: jamesgeorge007/github-activity-readme@master
+      - uses: Readme-Workflows/recent-activity@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -50,18 +50,18 @@ You can find an example [here](https://github.com/jamesgeorge007/jamesgeorge007/
 
 Use the following `input params` to customize it for your use case:-
 
-| Input Param | Default Value | Description |
-|--------|--------|--------|
-| `COMMIT_MSG` | :zap: Update README with the recent activity | Commit message used while committing to the repo |
-| `MAX_LINES` | 5 | The maximum number of lines populated in your readme file |
-| `README_FILE` | ./README.md | The readme file you want to push your activity to  |
+| Input Param   | Default Value                                | Description                                               |
+| ------------- | -------------------------------------------- | --------------------------------------------------------- |
+| `COMMIT_MSG`  | :zap: Update README with the recent activity | Commit message used while committing to the repo          |
+| `MAX_LINES`   | 5                                            | The maximum number of lines populated in your readme file |
+| `README_FILE` | ./README.md                                  | The readme file you want to push your activity to         |
 
 ```yml
 name: Update README
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -71,14 +71,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: jamesgeorge007/github-activity-readme@master
+      - uses: Readme-Workflows/recent-activity@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          COMMIT_MSG: 'Specify a custom commit message'
+          COMMIT_MSG: "Specify a custom commit message"
           MAX_LINES: 10
 ```
 
 ## History
- * The original project was inspired by [JasonEtco/activity-box](https://github.com/JasonEtco/activity-box)
- * Puneet and Abhishek wanted to add a new feature, the original project was no longer maintained, so Puneet created a fork and Abhishek supported him.
+
+- The original project was inspired by [JasonEtco/activity-box](https://github.com/JasonEtco/activity-box)
+- Puneet and Abhishek wanted to add a new feature, the original project was no longer maintained, so Puneet created a fork and Abhishek supported him.
