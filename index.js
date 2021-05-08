@@ -1,3 +1,6 @@
+// Copyright (c) 2020 James George
+// Copyright (c) 2021 Abhishek Joshi and Puneet Gopinath
+
 const core = require("@actions/core");
 const fs = require("fs");
 const path = require("path");
