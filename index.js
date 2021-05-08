@@ -128,11 +128,8 @@ Toolkit.run(
 
     try {
       readmeContent = fs.readFileSync(README_FILE, "utf-8").split("\n");
-    }
-    catch(err){
-      return tools.exit.failure(
-        `Couldn't find the file named ${README_FILE}`
-      );
+    } catch (err) {
+      return tools.exit.failure(`Couldn't find the file named ${README_FILE}`);
     }
 
     // Find the index corresponding to <!--START_SECTION:activity--> comment
