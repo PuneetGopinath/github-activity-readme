@@ -1,15 +1,18 @@
 {
-  "name": "github-activity-readme",
-  "version": "0.3.6",
-  "description": "Updates README with the recent GitHub activity of a user",
+  "name": "activity-readme",
+  "version": "0.1.0",
+  "description": "Updates README with the recent GitHub activity of a user. This project is a fork of https://github.com/jamesgeorge007/github-activity-readme",
   "main": "index.js",
-  "keywords": [],
-  "author": "James George",
+  "keywords": [
+    "github-profile",
+    "activity"
+  ],
+  "author": "James George, Abhishek Joshi, Puneet Gopinath",
   "license": "MIT",
   "scripts": {
     "format:check": "prettier --check index.js",
     "format": "prettier --write index.js",
-    "build": "ncc build index.js -o dist"
+    "build": "ncc build index.js --license LICENSE"
   },
   "dependencies": {
     "@actions/core": "^1.2.6",
@@ -18,5 +21,13 @@
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
     "prettier": "^2.0.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PuneetGopinath/github-activity-readme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PuneetGopinath/github-activity-readme/issues"
+  },
+  "homepage": "https://github.com/PuneetGopinath/github-activity-readme#readme"
 }

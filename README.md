@@ -1,5 +1,7 @@
 # GitHub Activity in Readme
 
+**Note:** This project is a fork of https://github.com/jamesgeorge007/github-activity-readme
+
 Updates `README.md` with the recent GitHub activity of a user.
 
 <img width="735" alt="profile-repo" src="https://user-images.githubusercontent.com/25279263/87703301-3aa4a500-c7b8-11ea-8eb6-245121997a7b.png">
@@ -52,7 +54,7 @@ Use the following `input params` to customize it for your use case:-
 |--------|--------|--------|
 | `COMMIT_MSG` | :zap: Update README with the recent activity | Commit message used while committing to the repo |
 | `MAX_LINES` | 5 | The maximum number of lines populated in your readme file |
-
+| `README_FILE` | ./README.md | The readme file you want to push your activity to  |
 
 ```yml
 name: Update README
@@ -77,4 +79,6 @@ jobs:
           MAX_LINES: 10
 ```
 
-_Inspired by [JasonEtco/activity-box](https://github.com/JasonEtco/activity-box)_
+## History
+ * The original project was inspired by [JasonEtco/activity-box](https://github.com/JasonEtco/activity-box)
+ * Puneet and Abhishek wanted to add a new feature, the original project was no longer maintained, so Puneet created a fork and Abhishek supported him.
