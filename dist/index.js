@@ -206,7 +206,13 @@ Toolkit.run(
       // Call the serializer to construct a string
       .map((item) => serializers[item.type](item));
 
-    const readmeContent = fs.readFileSync("./README.md", "utf-8").split("\n");
+    let readmeContent;
+
+    try {
+      readmeContent = fs.readFileSync(README_FILE, "utf-8").split("\n");
+    } catch (err) {
+      return tools.exit.failure(`Couldn't find the file named ${README_FILE}`);
+    }
 
     // Find the index corresponding to <!--START_SECTION:activity--> comment
     let startIdx = readmeContent.findIndex(
@@ -226,7 +232,9 @@ Toolkit.run(
     );
 
     if (!content.length) {
-      tools.exit.failure("No PullRequest/Issue/IssueComment events found");
+      tools.exit.failure(
+        "No PullRequest/Issue/IssueComment events found. Leaving README unchaged with previous activity."
+      );
     }
 
     if (content.length < 5) {
@@ -299,7 +307,7 @@ Toolkit.run(
     }
 
     // Update README
-    fs.writeFileSync("./README.md", readmeContent.join("\n"));
+    fs.writeFileSync(README_FILE, readmeContent.join("\n"));
 
     // Commit to the remote repository
     try {
