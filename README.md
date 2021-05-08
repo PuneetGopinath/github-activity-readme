@@ -1,3 +1,7 @@
+# **UPDATE**
+
+This repo is now maintained at [Readme-Worklows](https://github.com/Readme-Workflows)/[recent-activity](https://github.com/Readme-Workflows/recent-activity)
+
 # GitHub Activity in Readme
 
 **Note:** This project is a fork of https://github.com/jamesgeorge007/github-activity-readme
